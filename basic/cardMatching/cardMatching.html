@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .cardMatching {
+      margin: 0 auto;
+      width: 600px;
+      text-align: center;
+    }
+
+    .card {
+      display: inline-block;
+      margin: 0 20px 20px 0;
+      width: 20%;
+      height: 150px;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .card-front {
+      background: navy;
+    }
+
+    .card-back {
+      background: silver;
+      transform: rotateY(180deg);
+    }
+
+    .card.flipped .card-inner {
+      border: 1px solid black;
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+    .gameStart {
+      display: block;
+      width: 200px;
+      height: 100px;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+<body>
+  <button class="gameStart">new Game</button>
+  <!-- <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        앞
+      </div>
+      <div class="card-back">
+        뒤
+      </div>
+    </div>
+  </div> -->
+  <script src="./cardMatching.js"></script>
+</body>
+</html>
