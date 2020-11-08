@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table, tr, td {
+      border-spacing: 0;
+    }
+    tbody td {
+      width: 30px;
+      height: 30px;
+      border: 1px solid black;
+      text-align: center;
+      background-color: #444;
+    }
+    .opened {
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <input id="hor" type="number" placeholder="가로" value="10">
+  <input id="ver" type="number" placeholder="세로" value="10">
+  <input id="mine" type="number" placeholder="지뢰" value="20">
+  <button id="exec">실행</button>
+  <table id="table">
+    <thead>
+      <tr>
+        <td><span id="timer">0</span>초</td>
+      </tr>
+    </thead> 
+    <tbody></tbody>
+  </table>
+  <div id="result"></div>
+</body>
+<script src="./minesweaper.js"></script>
+</html>
